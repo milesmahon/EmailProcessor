@@ -1,0 +1,5 @@
+/.idea
+.gitignore
+input.txt
+*.iml
+/out
