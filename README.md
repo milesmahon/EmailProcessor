@@ -1,7 +1,7 @@
-#Email processor
+# Email processor
 Java program to process a list of emails, remove invalid addresses, and sort by domain name.
 
-##Usage
+## Usage
 
 ### Setup
 With [Maven installed](https://maven.apache.org/install.html):
@@ -16,10 +16,10 @@ Run
 
 Or, `mvn exec:java -Dexec.mainClass=EmailProcessor -Dexec.args="yourDesiredTextFile.txt"`
 
-##Assumptions
+## Assumptions
 input.txt contains (maybe invalid-format) email addresses separated by newlines.
 
-##Further improvements
+## Further improvements
 Allow user to specify output file
 
 Verify the number of command line arguments given
