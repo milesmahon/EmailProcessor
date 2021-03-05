@@ -1,5 +1,3 @@
-//import org.apache.commons.validator.EmailValidator;
-
 import org.apache.commons.validator.EmailValidator;
 
 public class Email implements Comparable<Email> {

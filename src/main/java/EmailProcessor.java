@@ -1,4 +1,3 @@
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,7 +15,7 @@ public class EmailProcessor {
             Scanner sc = new Scanner(inputFile);
             sc.useDelimiter("\\n");
             while (sc.hasNext()) {
-                String address = sc.next();
+                String address = sc.next().trim();
                 if (Email.isValid(address)) {
                     emails.add(new Email(address));
                 }
@@ -31,6 +30,9 @@ public class EmailProcessor {
         try {
             FileWriter writer = new FileWriter("output.txt");
             BufferedWriter buffer = new BufferedWriter(writer);
+            if (emails.isEmpty()) {
+                buffer.write("\n");
+            }
             for (Email email : emails){
                 buffer.write(email.toString());
                 buffer.write("\n");

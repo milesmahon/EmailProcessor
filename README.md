@@ -1,23 +1,25 @@
-unit tests
+#Email processor
+Java program to process a list of emails, remove invalid addresses, and sort by domain name.
 
-validate email addresses (don't include if invalid) -- do this in email constructor, throw exception if not working
+##Usage
 
-sort addresses by domain name
+### Setup
+With [Maven installed](https://maven.apache.org/install.html):
 
-how to build the program
+`mvn compile` in the project directory before running.
 
-assumptions/limitations
+`mvn test` to run unit tests.
 
-documentation
+### Running
+Run 
+`mvn exec:java` to run EmailProcessor on input.txt
 
-build tools, logging, dependency management?
+Or, `mvn exec:java -Dexec.mainClass=EmailProcessor -Dexec.args="yourDesiredTextFile.txt"`
 
-verify number of args
+##Assumptions
+input.txt contains (maybe invalid-format) email addresses separated by newlines.
 
-use streams
+##Further improvements
+Allow user to specify output file
 
-test leading/trailing whitespace -- add to assumptions
-
-https://davidcel.is/posts/stop-validating-email-addresses-with-regex/
-
-use InternetAddress dependency for email validation
+Verify the number of command line arguments given
