@@ -1,22 +1,21 @@
-package main.java;
+//import org.apache.commons.validator.EmailValidator;
+
+import org.apache.commons.validator.EmailValidator;
 
 public class Email implements Comparable<Email> {
-    private String address;
-    private String domain;
+    private final String address;
+    private final String domain;
 
     public Email(String address) {
         this.address = address;
         this.domain = address.substring(address.indexOf("@"));
     }
 
-    public static boolean isValid(String address) {
-        if (address.indexOf("@") != -1) {
-            return true;
-        }
-        return false;
+    public static boolean isValid(final String address) {
+        return EmailValidator.getInstance().isValid(address);
     }
 
-    public int compareTo(Email email) {
+    public int compareTo(final Email email) {
         return this.domain.compareTo(email.getDomain());
     }
 
